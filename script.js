@@ -10,10 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
 
-  // Shrink nav on scroll
+  // Shrink nav on scroll + show/hide scroll-to-top button
+  const scrollTopBtn = document.getElementById("scrollTop");
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 60);
+    if (scrollTopBtn) {
+      scrollTopBtn.classList.toggle("visible", window.scrollY > 500);
+    }
   }, { passive: true });
+
+  // Scroll to top click
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   // Mobile menu toggle
   if (navToggle) {
@@ -297,22 +308,22 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
 
-      schTl.from(".sch-left", {
-        y: 40,
+      schTl.from(".sch-header", {
+        y: 30,
         autoAlpha: 0,
-        duration: 0.8,
+        duration: 0.7,
       });
 
       schTl.from(
-        ".sch-table tr",
+        ".sch-card",
         {
-          x: 30,
+          y: 40,
           autoAlpha: 0,
-          stagger: 0.08,
+          stagger: 0.06,
           duration: 0.5,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=0.3"
       );
 
       schTl.from(
@@ -481,20 +492,64 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
-      const target = document.querySelector(anchor.getAttribute("href"));
+      const href = anchor.getAttribute("href");
+      if (href === "#") return;
+      const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
 
       const navHeight = nav.offsetHeight;
       const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight;
 
-      gsap.to(window, {
-        scrollTo: { y: targetTop, autoKill: true },
-        duration: 1,
-        ease: "power2.inOut",
-      });
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
     });
   });
+
+  // ==================== LIGHTBOX ====================
+  const lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    const lbImg = lightbox.querySelector("img");
+    const lbClose = lightbox.querySelector(".lightbox-close");
+
+    // Open lightbox on gallery image click
+    document.querySelectorAll(".gi").forEach((gi) => {
+      gi.addEventListener("click", () => {
+        const img = gi.querySelector("img");
+        if (!img) return;
+        // Use larger version
+        const src = img.src.replace(/w=\d+/, "w=1600");
+        lbImg.src = src;
+        lbImg.alt = img.alt;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+
+        gsap.fromTo(lbImg, { scale: 0.9, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.4, ease: "power2.out" });
+      });
+    });
+
+    // Close lightbox
+    const closeLightbox = () => {
+      gsap.to(lbImg, {
+        scale: 0.9,
+        autoAlpha: 0,
+        duration: 0.25,
+        ease: "power2.in",
+        onComplete: () => {
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "";
+          lbImg.src = "";
+        },
+      });
+    };
+
+    lbClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("active")) closeLightbox();
+    });
+  }
 
   // ==================== FORM HANDLING ====================
   const form = document.getElementById("contactForm");
