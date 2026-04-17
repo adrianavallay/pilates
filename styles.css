@@ -922,6 +922,143 @@ footer p{
   transform:translateY(-2px);
 }
 
+/* ==================== POPUP BIENVENIDA ==================== */
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  z-index:500;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity var(--duration-slow) var(--ease-out),
+             visibility var(--duration-slow);
+}
+.popup-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.popup{
+  background:var(--white);
+  width:90%;
+  max-width:420px;
+  padding:var(--sp-7) var(--sp-6);
+  border-radius:16px;
+  text-align:center;
+  position:relative;
+  box-shadow:var(--shadow-lg);
+  transform:scale(0.9) translateY(20px);
+  transition:transform var(--duration-slow) var(--ease-out);
+}
+.popup-overlay.active .popup{
+  transform:scale(1) translateY(0);
+}
+
+.popup-close{
+  position:absolute;
+  top:14px;right:16px;
+  width:36px;height:36px;
+  border:none;
+  background:var(--cream);
+  border-radius:50%;
+  font-size:1.3rem;
+  color:var(--taupe);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background var(--duration-fast), color var(--duration-fast);
+}
+.popup-close:hover{
+  background:var(--cream-dark);
+  color:var(--black);
+}
+
+.popup-badge{
+  display:inline-block;
+  background:var(--sage);
+  color:#fff;
+  font-family:var(--sans);
+  font-size:0.8rem;
+  font-weight:600;
+  letter-spacing:0.15em;
+  padding:6px 20px;
+  border-radius:20px;
+  margin-bottom:var(--sp-5);
+}
+
+.popup-title{
+  font-family:var(--serif);
+  font-size:1.8rem;
+  font-weight:400;
+  color:var(--black);
+  margin-bottom:var(--sp-3);
+}
+.popup-title em{
+  font-style:italic;
+  color:var(--sage);
+}
+
+.popup-desc{
+  font-size:0.93rem;
+  color:#555;
+  line-height:1.7;
+  margin-bottom:var(--sp-5);
+}
+.popup-desc strong{
+  color:var(--sage-dark);
+}
+
+.popup-code{
+  font-family:var(--sans);
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:0.25em;
+  color:var(--sage-dark);
+  background:var(--sage-bg);
+  border:1.5px dashed var(--sage-light);
+  border-radius:10px;
+  padding:12px 24px;
+  display:inline-block;
+  margin-bottom:var(--sp-5);
+}
+
+.popup-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--sp-2);
+  width:100%;
+  padding:14px;
+  background:linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color:#fff;
+  font-family:var(--sans);
+  font-size:0.78rem;
+  font-weight:600;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border-radius:10px;
+  transition:transform var(--duration-fast), box-shadow var(--duration-base);
+  margin-bottom:var(--sp-4);
+}
+.popup-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(131,58,180,0.35);
+}
+.popup-btn:active{transform:translateY(0) scale(0.98)}
+
+.popup-note{
+  font-size:0.7rem;
+  color:var(--taupe);
+  letter-spacing:0.03em;
+}
+
 /* ==================== FLOATING BUTTONS ==================== */
 .float-btn{
   position:fixed;

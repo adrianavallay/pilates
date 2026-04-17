@@ -551,6 +551,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ==================== POPUP BIENVENIDA ====================
+  const popupOverlay = document.getElementById("popupOverlay");
+  const popupClose = document.getElementById("popupClose");
+
+  if (popupOverlay && popupClose) {
+    // Show popup after 3 seconds if not already dismissed this session
+    if (!sessionStorage.getItem("popupDismissed")) {
+      setTimeout(() => {
+        popupOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }, 3000);
+    }
+
+    const closePopup = () => {
+      popupOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+      sessionStorage.setItem("popupDismissed", "true");
+    };
+
+    popupClose.addEventListener("click", closePopup);
+    popupOverlay.addEventListener("click", (e) => {
+      if (e.target === popupOverlay) closePopup();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && popupOverlay.classList.contains("active")) closePopup();
+    });
+  }
+
   // ==================== FORM HANDLING ====================
   const form = document.getElementById("contactForm");
   if (form) {
