@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOY Pilates — Studio Reformer</title>
+<meta name="description" content="FOY Pilates Studio Reformer — Clases de Pilates Reformer, Mat y entrenamiento personalizado. Reserva tu clase hoy.">
+
+<!-- Google Fonts: Playfair Display + Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#" aria-label="FOY Pilates - Inicio"><span>FOY</span> Pilates</a>
+  <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#horarios">Horarios</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#contacto" class="nav-cta">Reservar clase</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80" alt="Clase de Pilates Reformer en FOY Studio" loading="eager" width="1200" height="800">
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">Studio Reformer</p>
+    <h1 class="hero-title">Tu cuerpo<br>en <em>equilibrio</em></h1>
+    <p class="hero-sub">Movimiento consciente, resultados reales</p>
+    <p class="hero-desc">Descubri el poder del Pilates Reformer en un espacio disenado para tu bienestar. Clases reducidas con atencion personalizada.</p>
+    <div class="btns">
+      <a href="#contacto" class="btn btn-sage">Reservar clase</a>
+      <a href="#nosotros" class="btn btn-outline">Conocenos</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>8+</strong><span>Anos de experiencia</span></div>
+      <div class="stat"><strong>500+</strong><span>Alumnas activas</span></div>
+      <div class="stat"><strong>15</strong><span>Reformers</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Reformer <span class="ticker-dot">&bull;</span> Mat <span class="ticker-dot">&bull;</span> Stretching <span class="ticker-dot">&bull;</span> Funcional <span class="ticker-dot">&bull;</span> Personalizado</span>
+    <span class="ticker-item">Reformer <span class="ticker-dot">&bull;</span> Mat <span class="ticker-dot">&bull;</span> Stretching <span class="ticker-dot">&bull;</span> Funcional <span class="ticker-dot">&bull;</span> Personalizado</span>
+    <span class="ticker-item">Reformer <span class="ticker-dot">&bull;</span> Mat <span class="ticker-dot">&bull;</span> Stretching <span class="ticker-dot">&bull;</span> Funcional <span class="ticker-dot">&bull;</span> Personalizado</span>
+    <span class="ticker-item">Reformer <span class="ticker-dot">&bull;</span> Mat <span class="ticker-dot">&bull;</span> Stretching <span class="ticker-dot">&bull;</span> Funcional <span class="ticker-dot">&bull;</span> Personalizado</span>
+  </div>
+</div>
+
+<!-- QUOTE -->
+<section class="quote-strip">
+  <blockquote>"En diez sesiones sentiras la diferencia, en veinte la veras, y en treinta tendras un cuerpo nuevo."</blockquote>
+  <cite>Joseph Pilates</cite>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="nosotros">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80" alt="Interior del estudio FOY Pilates" loading="lazy" width="800" height="600">
+  </div>
+  <div class="about-content">
+    <p class="sec-label">Nosotros</p>
+    <h2 class="sec-title">Un espacio pensado para tu <em>bienestar</em></h2>
+    <p class="sec-body">En FOY creemos que el movimiento consciente transforma. Nuestro studio cuenta con equipamiento de primera linea y un equipo de instructoras certificadas que te acompanan en cada clase.</p>
+    <div class="tags">
+      <span class="tag">Instructoras certificadas</span>
+      <span class="tag">Grupos reducidos</span>
+      <span class="tag">Equipamiento premium</span>
+    </div>
+    <a href="#contacto" class="btn btn-sage">Agendar prueba</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="sec-center">
+    <p class="sec-label">Servicios</p>
+    <h2 class="sec-title">Encontra tu <em>practica</em></h2>
+  </div>
+  <p class="sec-body-center">Diferentes modalidades para que elijas la que mejor se adapte a tus objetivos y nivel de experiencia.</p>
+  <div class="srv-grid">
+    <div class="srv">
+      <p class="srv-n">01</p>
+      <h3 class="srv-t">Reformer Grupal</h3>
+      <p class="srv-d">Clases en grupos de hasta 6 personas. Trabajo integral con resistencia variable en el reformer. Ideal para todos los niveles.</p>
+    </div>
+    <div class="srv">
+      <p class="srv-n">02</p>
+      <h3 class="srv-t">Personal Training</h3>
+      <p class="srv-d">Sesiones individuales disenadas segun tus necesidades. Atencion exclusiva con plan de trabajo personalizado.</p>
+    </div>
+    <div class="srv">
+      <p class="srv-n">03</p>
+      <h3 class="srv-t">Mat Pilates</h3>
+      <p class="srv-d">Pilates en colchoneta con elementos. Trabajo de core profundo, flexibilidad y control corporal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="horarios">
+  <div class="sch-left">
+    <p class="sec-label">Horarios</p>
+    <h2 class="sec-title">Encontra tu <em>momento</em></h2>
+    <p class="sec-body">Ofrecemos horarios flexibles para que puedas incorporar el pilates a tu rutina sin complicaciones.</p>
+    <div class="sch-note">
+      <strong>Importante</strong>
+      Las clases requieren reserva previa. Cancelaciones con menos de 4hs de anticipacion no se reprograman.
+    </div>
+  </div>
+  <div class="sch-right">
+    <table class="sch-table">
+      <tr>
+        <td class="sch-day">Lunes</td>
+        <td class="sch-time">8:00 — 9:00 Reformer Grupal<br>10:00 — 11:00 Mat<br>17:00 — 18:00 Reformer Grupal<br>19:00 — 20:00 Reformer Grupal</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Martes</td>
+        <td class="sch-time">9:00 — 10:00 Reformer Grupal<br>11:00 — 12:00 Personal<br>18:00 — 19:00 Reformer Grupal</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Miercoles</td>
+        <td class="sch-time">8:00 — 9:00 Reformer Grupal<br>10:00 — 11:00 Mat<br>17:00 — 18:00 Reformer Grupal<br>19:00 — 20:00 Reformer Grupal</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Jueves</td>
+        <td class="sch-time">9:00 — 10:00 Reformer Grupal<br>11:00 — 12:00 Personal<br>18:00 — 19:00 Reformer Grupal</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Viernes</td>
+        <td class="sch-time">8:00 — 9:00 Reformer Grupal<br>10:00 — 11:00 Mat<br>17:00 — 18:00 Reformer Grupal</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Sabado</td>
+        <td class="sch-time">9:00 — 10:00 Reformer Grupal<br>10:30 — 11:30 Mat</td>
+      </tr>
+      <tr>
+        <td class="sch-day">Domingo</td>
+        <td class="sch-time sch-closed">Cerrado</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeria">
+  <div class="sec-center">
+    <p class="sec-label">Galeria</p>
+    <h2 class="sec-title">Nuestro <em>espacio</em></h2>
+  </div>
+  <div class="gal-grid">
+    <div class="gi tall">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Alumna en reformer" loading="lazy" width="600" height="800">
+    </div>
+    <div class="gi">
+      <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80" alt="Estudio de pilates" loading="lazy" width="600" height="400">
+    </div>
+    <div class="gi">
+      <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80" alt="Clase grupal" loading="lazy" width="600" height="400">
+    </div>
+    <div class="gi wide">
+      <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=900&q=80" alt="Equipamiento reformer" loading="lazy" width="900" height="400">
+    </div>
+    <div class="gi">
+      <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" alt="Detalle de estudio" loading="lazy" width="600" height="400">
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="contact-left">
+    <p class="sec-label">Contacto</p>
+    <h2 class="sec-title">Empeza <em>hoy</em></h2>
+    <p class="sec-body-ct">Escribinos para reservar tu primera clase o resolver cualquier duda. Te esperamos.</p>
+    <div class="ci">
+      <div class="ci-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div><span class="ci-label">Direccion</span><span class="ci-val">Av. Cabildo 1234, Belgrano, CABA</span></div>
+    </div>
+    <div class="ci">
+      <div class="ci-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div><span class="ci-label">Telefono</span><a href="tel:+5491112345678" class="ci-val">+54 9 11 1234-5678</a></div>
+    </div>
+    <div class="ci">
+      <div class="ci-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div><span class="ci-label">Email</span><a href="mailto:hola@foypilates.com" class="ci-val">hola@foypilates.com</a></div>
+    </div>
+    <div class="ci">
+      <div class="ci-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <div><span class="ci-label">Instagram</span><a href="#" class="ci-val" target="_blank" rel="noopener">@foypilates</a></div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <h3>Reserva tu clase</h3>
+    <p>Completa el formulario y nos pondremos en contacto para confirmar tu turno.</p>
+    <form id="contactForm" novalidate>
+      <div class="fr-row">
+        <div class="fr">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="given-name">
+        </div>
+        <div class="fr">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="fr">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="fr">
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+      </div>
+      <div class="fr">
+        <label for="clase">Clase de interes</label>
+        <select id="clase" name="clase" required>
+          <option value="">Selecciona una opcion</option>
+          <option value="reformer">Reformer Grupal</option>
+          <option value="personal">Personal Training</option>
+          <option value="mat">Mat Pilates</option>
+        </select>
+      </div>
+      <div class="fr">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-sage btn-full">Enviar consulta</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo"><span>FOY</span> Pilates</div>
+  <p>&copy; 2025 FOY Pilates Studio. Todos los derechos reservados.</p>
+  <div class="f-social">
+    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
