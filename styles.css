@@ -354,7 +354,8 @@ nav.scrolled{
 .ticker-inner{
   display:flex;
   white-space:nowrap;
-  animation:tick 28s linear infinite;
+  width:max-content;
+  animation:tick 40s linear infinite;
 }
 .ticker-item{
   font-family:var(--serif);
@@ -363,10 +364,10 @@ nav.scrolled{
   font-style:italic;
   color:rgba(255,255,255,0.85);
   letter-spacing:0.06em;
-  padding:0 36px;
+  padding:0 14px;
   flex-shrink:0;
 }
-.ticker-dot{color:rgba(255,255,255,0.4);margin:0 4px}
+.ticker-dot{color:rgba(255,255,255,0.4);margin:0 6px}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ==================== QUOTE ==================== */
