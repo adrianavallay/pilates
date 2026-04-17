@@ -260,19 +260,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
 
-      // Service cards — batch reveal with stagger
-      ScrollTrigger.batch(".srv", {
-        onEnter: (elements) => {
-          gsap.from(elements, {
-            y: 50,
-            autoAlpha: 0,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: "power3.out",
-          });
+      // Service cards — all appear together, aligned
+      gsap.from(".srv", {
+        autoAlpha: 0,
+        y: 40,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".srv-grid",
+          start: "top 85%",
+          toggleActions: "play none none none",
         },
-        start: "top 85%",
-        once: true,
       });
 
       // Service numbers — count-up feel

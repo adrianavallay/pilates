@@ -464,17 +464,16 @@ nav.scrolled{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:0;
+  align-items:stretch;
 }
 .srv{
   background:var(--sage-bg);
   padding:50px 36px;
-  transition:background var(--duration-slow) var(--ease-out),
-             transform var(--duration-base) var(--ease-out);
+  transition:background var(--duration-slow) var(--ease-out);
   position:relative;
   overflow:hidden;
   display:flex;
   flex-direction:column;
-  min-height:280px;
   border-right:1px solid var(--line);
 }
 .srv:last-child{border-right:none}
